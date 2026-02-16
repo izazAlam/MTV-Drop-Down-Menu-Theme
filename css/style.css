@@ -146,23 +146,6 @@ a {
 .dropdown-subitem:hover>.dropdown-submenu {
     display: block;
 }
-.dropdown-link {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 45px;
-    padding: 0 20px;
-    position: relative;
-}
-.dropdown-link,
-.dropdown-sublink {
-    border-bottom: 1px solid #444;
-}
-
-.dropdown-link:last-child,
-.dropdown-sublink:last-child {
-    border-bottom: none;
-}
 
 /*==============================
   ICONS (RIGHT ARROW)
