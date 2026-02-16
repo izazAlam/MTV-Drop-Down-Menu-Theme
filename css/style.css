@@ -1,0 +1,195 @@
+/*==============================
+  GOOGLE FONTS
+==============================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*==============================
+  RESET & BASE STYLES
+==============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000000, #464646);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*==============================
+  CONTAINERS
+==============================*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 40px;
+}
+
+/*==============================
+  HEADER TOPLINE
+==============================*/
+.header .head-line {
+    display: flex;
+    gap: 1px;
+    /* gap between header elements */
+    align-items: center;
+}
+
+.header .head-line p {
+    font-size: 2rem;
+}
+
+/*==============================
+  IMAGE WRAPPER
+==============================*/
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.img-wrapper img {
+    width: 50px;
+    display: block;
+}
+
+.img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(128, 128, 128, 0.6));
+    pointer-events: none;
+}
+
+/*==============================
+  NAVIGATION
+==============================*/
+.nav.container {
+    margin: 20px auto;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1px;
+}
+
+/*==============================
+  NAV ITEMS & DROPDOWNS
+  ==============================*/
+.nav-list .nav-link,
+.dropdown-link,.dropdown-sublink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    padding: 0 20px;
+    background-color: #555555;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.nav-list .nav-link:hover,
+.dropdown-link:hover,
+.dropdown-sublink:hover {
+    background-color: #87CEEB;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4e4e4e;
+    min-width: 200px;
+    display: none;
+    z-index: 10;
+    gap: 1px;
+}
+
+.dropdown-item:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-subitem {
+    position: relative;
+}
+
+.dropdown-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #555555;
+    display: none;
+    min-width: 180px;
+    gap: 1px;
+}
+
+.dropdown-subitem:hover>.dropdown-submenu {
+    display: block;
+}
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 45px;
+    padding: 0 20px;
+    position: relative;
+}
+.dropdown-link,
+.dropdown-sublink {
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-link:last-child,
+.dropdown-sublink:last-child {
+    border-bottom: none;
+}
+
+/*==============================
+  ICONS (RIGHT ARROW)
+==============================*/
+.right-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    background-color: #333333;
+    transition: background-color 0.3s;
+}
+
+.dropdown-link:hover .right-arrow {
+    background-color: #1E90FF;
+}
+
+/*==============================
+  HORIZONTAL LINE
+==============================*/
+.underline {
+    border: none;
+    height: 1px;
+    background-color: #7c7c7c;
+    margin: 10px 0 0 0;
+}
